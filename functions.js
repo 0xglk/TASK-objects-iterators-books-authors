@@ -36,7 +36,6 @@ function getAuthorByName(authorName, authors) {
 function bookCountsByAuthor() {
   // Your code goes here
   const result = authors.map(author => ({"author:": author.name, "bookCount:": author.books}));
-  
   return (result);
 
 }

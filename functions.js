@@ -33,7 +33,7 @@ function getAuthorByName(authorName, authors) {
  * - returns an array of objects with the format:
  *    [{ author: <NAME>, bookCount: <NUMBER_OF_BOOKS> }]
  ****************************************************************/
-function bookCountsByAuthor() {
+function bookCountsByAuthor(authors) {
   // Your code goes here
   const result = authors.map(author => ({"author:": author.name, "bookCount:": author.books}));
   return (result);

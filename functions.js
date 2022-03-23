@@ -41,7 +41,7 @@ function bookCountsByAuthor() {
 
 }
 
-bookCountsByAuthor(authors);
+//bookCountsByAuthor(authors);
 //console.log(bookCountsByAuthor(authors));
 
 /**************************************************************

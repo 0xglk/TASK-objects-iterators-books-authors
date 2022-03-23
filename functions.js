@@ -10,8 +10,9 @@ const books = require("./books.json");
  ****************************************************************/
 function getBookById(bookId, books) {
   // Your code goes here
+  return books.find((book) => book.id === bookId);
 }
-// console.log(getBookById(12, books));
+//console.log(getBookById(12, books));
 
 /**************************************************************
  * getAuthorByName(authorName, authors):
@@ -22,6 +23,7 @@ function getBookById(bookId, books) {
  ****************************************************************/
 function getAuthorByName(authorName, authors) {
   // Your code goes here
+  return authors.find((author) => author.name.toUpperCase() === authorName.toUpperCase());
 }
 // console.log(getAuthorByName("J.K. Rowling", authors));
 
@@ -31,10 +33,16 @@ function getAuthorByName(authorName, authors) {
  * - returns an array of objects with the format:
  *    [{ author: <NAME>, bookCount: <NUMBER_OF_BOOKS> }]
  ****************************************************************/
-function bookCountsByAuthor(authors) {
+function bookCountsByAuthor() {
   // Your code goes here
+  const result = authors.map(author => author.books.flatMap(book=> ({"author:": author.name, "bookCount:": book})));
+  
+  console.log(result);
+
 }
-// console.log(bookCountsByAuthor(authors));
+
+bookCountsByAuthor(authors);
+//console.log(bookCountsByAuthor(authors));
 
 /**************************************************************
  * booksByColor(books):

@@ -35,9 +35,9 @@ function getAuthorByName(authorName, authors) {
  ****************************************************************/
 function bookCountsByAuthor() {
   // Your code goes here
-  const result = authors.map(author => author.books.flatMap(book=> ({"author:": author.name, "bookCount:": book})));
+  const result = authors.map(author => ({"author:": author.name, "bookCount:": author.books}));
   
-  console.log(result);
+  return (result);
 
 }
 
